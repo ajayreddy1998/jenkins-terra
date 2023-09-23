@@ -10,7 +10,7 @@ required_providers {
   backend "s3"
    { 
      Bucket = "terraform-ajay-state"
-     keyname = "ec-2_s3"
+     key = "ec-2_s3"
      region = "us-east-1"
    }
 }
