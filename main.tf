@@ -1,3 +1,14 @@
+Terraform
+{
+  backend "s3"
+   { 
+     Bucket = "terraform-ajay-state"
+     keyname = "ec-2_s3"
+     region = "us-east-1"
+   }
+}
+
+
 provider "aws" {
    region = "us-east-1"
    profile = "default" 
