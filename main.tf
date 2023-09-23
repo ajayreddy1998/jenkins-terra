@@ -12,10 +12,8 @@ required_providers {
      region = "us-east-1"
    }
 }
-
 provider "aws" {
    region = "us-east-1"
-   profile = "default" 
 }
 
  resource "aws_instance" "ec-2" {
