@@ -1,5 +1,4 @@
-terraform
-{
+terraform {
 required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -7,14 +6,12 @@ required_providers {
     }
   }
 
-  backend "s3"
-   { 
-     Bucket = "terraform-ajay-state"
+  backend "s3" { 
+     bucket = "terraform-ajay-state"
      key = "ec-2_s3"
      region = "us-east-1"
    }
 }
-
 
 provider "aws" {
    region = "us-east-1"
