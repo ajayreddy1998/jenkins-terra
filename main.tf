@@ -25,7 +25,7 @@ resource "aws_instance" "example" {
 
 provisioner "remote-exec" {
   inline = [
-    "sudo su "
+    "sudo su"
     "apt-get install nginx"
     "systemctl start nginx"
     "mkdir page"
