@@ -21,22 +21,19 @@ resource "aws_instance" "example" {
   ami           = "ami-0c55b159cbfafe1f0"
   instance_type = "t2.micro"
   key_name = "linux"
-}
 
-provisioner "remote-exec" {
-  inline = [
-    "sudo su"
-    "apt-get install nginx"
-    "systemctl start nginx"
-    "mkdir page"
-    "git pull https://github.com/ajayreddy1998/nonprofitwebsite.git"
-    "cp -r page /var/www/html/"
-  ]
-
-  connection {
+connection {
     type        = "ssh"
     user        = "ec2-user"
     private_key = "linux"
     host        = aws_instance.example.public_ip
   }
+
+provisioner "remote-exec" {
+  inline = [
+    "apt-get install nginx",
+    "systemctl start nginx",
+    "mkdir page",
+  ]
+ }
 }
