@@ -93,7 +93,7 @@ resource "aws_instance" "example" {
     type = "ssh"
     user = "ubuntu"
     //private_key = file("~/.ssh/sam")
-    private_key = file("jenkins-terra/linux.pem")
+    private_key = file("/jenkins-terra/linux.pem")
     host = self.public_ip
   }
 
