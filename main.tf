@@ -20,7 +20,7 @@ resource "aws_vpc" "myvpc" {
 
 resource "aws_key_pair" "ajay" {
   key_name = "sample"
-  public_key = "sam.pub"
+  public_key = file("sam.pub")
 }
 
 resource "aws_subnet" "sub1" {
@@ -91,7 +91,7 @@ resource "aws_instance" "example" {
   connection {
     type = "ssh"
     user = "ubuntu"
-    private_key = "sam"
+    private_key = file("sam")
     //private_key = "linux.pem"
     host = self.public_ip
   }
