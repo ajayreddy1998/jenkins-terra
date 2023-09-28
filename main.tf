@@ -105,11 +105,11 @@ resource "aws_instance" "example" {
       "mkdir code",
       "cd code",
       //"git clone https://github.com/ajayreddy1998/Yeshlaptop.git",
-     "git clone https://github.com/ajayreddy1998/microservice.git",
+      "git clone https://github.com/ajayreddy1998/microservice.git",
       "cd coit-frontend",
-      "npm run build" 
+      "npm run build",
       //"cd Yeshlaptop",
-      sudo cp -r build  /var/www/html", 
+      "sudo cp -r build  /var/www/html", 
      ]
   }
 }
