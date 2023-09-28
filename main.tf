@@ -98,7 +98,7 @@ resource "aws_instance" "example" {
 
   provisioner "remote-exec" {
     inline = [ 
-   8/   "sudo apt-get update",
+  */ "sudo apt-get update",
       "sudo apt-get install -y nginx",
       "sudo apt-get install -y git",
       "mkdir code",
