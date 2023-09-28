@@ -98,14 +98,18 @@ resource "aws_instance" "example" {
 
   provisioner "remote-exec" {
     inline = [ 
-  /* "sudo apt-get update",
+     "sudo apt-get update",
       "sudo apt-get install -y nginx",
       "sudo apt-get install -y git",
+      "sudo apt-get install -y npm",
       "mkdir code",
       "cd code",
-      "git clone https://github.com/ajayreddy1998/Yeshlaptop.git",
-      "cd Yeshlaptop",
-      "sudo cp index.html /var/www/html", /*
+      //"git clone https://github.com/ajayreddy1998/Yeshlaptop.git",
+     "git clone https://github.com/ajayreddy1998/microservice.git",
+      "cd coit-frontend",
+      "npm run build" 
+      //"cd Yeshlaptop",
+      sudo cp -r build  /var/www/html", 
      ]
   }
 }
