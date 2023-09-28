@@ -98,14 +98,14 @@ resource "aws_instance" "example" {
 
   provisioner "remote-exec" {
     inline = [ 
-  */ "sudo apt-get update",
+  /* "sudo apt-get update",
       "sudo apt-get install -y nginx",
       "sudo apt-get install -y git",
       "mkdir code",
       "cd code",
       "git clone https://github.com/ajayreddy1998/Yeshlaptop.git",
       "cd Yeshlaptop",
-      "sudo cp index.html /var/www/html", */
+      "sudo cp index.html /var/www/html", /*
      ]
   }
 }
