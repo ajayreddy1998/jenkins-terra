@@ -105,7 +105,7 @@ resource "aws_instance" "example" {
       "cd code",
       "git clone https://github.com/ajayreddy1998/Yeshlaptop.git",
       "cd Yeshlaptop",
-      "sudo cp index.html /var/www/html", /*
+      "sudo cp index.html /var/www/html", */
      ]
   }
 }
